@@ -1,0 +1,24 @@
+@model bankAccounts.Models.RegisterViewModel
+
+<h1>Register</h1>
+<form asp-controller="User" asp-action="registerUser" method="POST">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name"></label>
+    <input class="form-control" asp-for="Name">
+
+    <span asp-validation-for="Email"></span>
+    <label asp-for="Email"></label>
+    <input class="form-control" asp-for="Email">
+
+    <label asp-for="Password"></label>
+    <input class="form-control" asp-for="Password">
+
+    <span asp-validation-for="pConfirm"></span>
+    <label for="pConfirm">Confirm password</label>
+    <input class="form-control" asp-for="pConfirm"><br>
+
+    <button type="submit" class="btn btn-info">Register</button><br>
+
+</form><br>
+<p>Already have an account?</p>
+<a href="login"><button class="btn btn-info">Login</button></a>
